@@ -39,7 +39,7 @@ const Bamazon = {
   },
   checkInventory(id, quanity) {
     // Method responsible for making sure there is enough units to fill the customers order.
-    
+    connection.query('SELECT stock_quanity FROM products WHERE stock_quanity > ?')
   },
   promptCustomer: function() {
     inquirer.prompt({
