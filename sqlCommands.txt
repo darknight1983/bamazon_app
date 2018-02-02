@@ -1,0 +1,45 @@
+DROP DATABASE IF EXISTS bamazonDB;
+
+CREATE DATABASE bamazonDB;
+
+USE bamazonDB;
+
+CREATE TABLE products (
+  item_id INT NOT NULL AUTO_INCREMENT,
+  product_name VARCHAR(50) NOT NULL,
+  department_name VARCHAR(50) NOT NULL,
+  price FLOAT(3,3),
+  stock_quanity INT,
+  PRIMARY KEY (item_id)
+);
+
+INSERT INTO products (product_name, department_name, price, stock_quanity)
+VALUES ("apple watch", "electronics", 228.97, 15);
+
+INSERT INTO products (product_name, department_name, price, stock_quanity)
+VALUES ("Hanes Hooded Sweatshirt", "fashion", 11.00, 100);
+
+INSERT INTO products (product_name, department_name, price, stock_quanity)
+VALUES ("Shvigel Passport Cover", "clothing", 13.99, 200);
+
+
+INSERT INTO products (product_name, department_name, price, stock_quanity)
+VALUES ("Instant Pot DUO", "home & kitchen", 129.95, 11);
+
+INSERT INTO products (product_name, department_name, price, stock_quanity)
+VALUES ("Phillips Norelco Shaver", "beauty & personal care", 89.99, 34);
+
+INSERT INTO products (product_name, department_name, price, stock_quanity)
+VALUES ("Fire TV with 4K", "electronics", 54.99, 200);
+
+INSERT INTO products (product_name, department_name, price, stock_quanity)
+VALUES ("Amazon Echo Dot", "electronics", 49.99, 90);
+
+INSERT INTO products (product_name, department_name, price, stock_quanity)
+VALUES ("AMIR Camera Lens", "electronics", 8.98, 20);
+
+INSERT INTO products (product_name, department_name, price, stock_quanity)
+VALUES ("Pulled Pork Shredder Claws", "Outdoor Cooking", 8.99, 10);
+
+INSERT INTO products (product_name, department_name, price, stock_quanity)
+VALUES ("Pet Grooming Brush", "Pet Supplies", 10.37, 7);

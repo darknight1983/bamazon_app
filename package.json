@@ -1,0 +1,24 @@
+{
+  "name": "bamazon_app",
+  "version": "1.0.0",
+  "description": "A amazon-like node.js application using the inquirer module.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darknight1983/bamazon_app.git"
+  },
+  "author": "Jacolby Green",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darknight1983/bamazon_app/issues"
+  },
+  "homepage": "https://github.com/darknight1983/bamazon_app#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "inquirer": "^5.0.1",
+    "mysql": "^2.15.0"
+  }
+}
