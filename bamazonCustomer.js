@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 const inquirer = require('inquirer');
-var Table = require('cli-table'); // Module that creates tables in the console.
+const Table = require('cli-table'); // Module that creates tables in the console.
 
 
 // Create a connection to the sql database.
@@ -34,7 +34,11 @@ const Bamazon = {
     });
   },
   makeOrder: function(id, quanity) {
-    // First, check to see if the product is in stock and has enough units.
+
+
+  },
+  checkInventory(id, quanity) {
+    // Method responsible for making sure there is enough units to fill the customers order.
     
   },
   promptCustomer: function() {
@@ -53,7 +57,7 @@ const Bamazon = {
         //Store a reference to the quantity the customer would like to buy.
         this.item_quanity = answer.quanity;
         // Check the database to confirm if the order can be made or not.
-        this.makeOrder(this.item_id, this.item_quanity)
+        this.checkInventory(this.item_id, this.item_quanity)
       })
     })
   }
