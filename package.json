@@ -4,7 +4,8 @@
   "description": "A amazon-like node.js application using the inquirer module.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bamazonCustomer.js"
   },
   "repository": {
     "type": "git",
