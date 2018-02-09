@@ -33,9 +33,6 @@ const Bamazon = {
       this.promptCustomer();
     });
   },
-  showInventory: function() {
-
-  },
   makeOrder: function(id, quanity, inStock, price) {
     // Use arguements to build database query.
     let query = `UPDATE products SET stock_quanity = ${inStock - quanity} WHERE item_id = ${id}`;
