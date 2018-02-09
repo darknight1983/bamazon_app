@@ -119,7 +119,49 @@ const bamazonManager = {
 
   },
   newProduct: function() {
-
+    let productName = null, departmentName = null, price = null, stockQuanity = null;
+    inquirer.prompt({
+      type: 'input',
+      name: 'productName',
+      message: "What is the name of the product you like to add to the inventory?"
+    }).then((answer) => {
+      productName = answer.productName;
+      inquirer.prompt({
+        type: 'input',
+        name: 'departmentName',
+        message: 'What department would you like this product to be added to?'
+      }).then((answer) => {
+        departmentName = answer.departmentName;
+        inquirer.prompt({
+          type: 'input',
+          name: 'price',
+          message: 'What is the price per unit for this product?'
+        }).then((answer) => {
+          price = answer.price;
+          inquirer.prompt({
+            type: 'input',
+            name: 'stock_quanity',
+            message: 'How many units will be added to the inventory?'
+          }).then((answer) => {
+            stockQuanity = answer.stock_quanity
+            connection.query('INSERT INTO products SET ?',
+            {
+                product_name: productName,
+                department_name: departmentName,
+                price: price,
+                stock_quanity: stockQuanity
+            },
+             (err, results, fields) => {
+              if (err) {
+                throw err;
+              }
+              console.log('The product has been added to the inventory');
+              connection.end();
+            })
+          });
+        });
+      });
+    });
   },
   start: function() {
     inquirer.prompt({
@@ -139,6 +181,8 @@ const bamazonManager = {
         case this.managerOptions[2]:
          this.addInventory();
          break;
+        case this.managerOptions[3]:
+          this.newProduct();
       }
 
     })
