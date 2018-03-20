@@ -36,3 +36,17 @@ The JavaScript files mentioned above query a MySQL database called `Bamazon` whi
 ### Node Package Manager (npm)
 If you clone this repo down to your machine, note that it has two npm dependencies!
 Before running the JavaScript files mentioned above, please run `npm install` in your terminal to download the [prompt](https://www.npmjs.com/package/prompt) and [mysql](https://www.npmjs.com/package/mysql) node packages.
+
+### Screenshots
+Below are some screenshots that show the functionality of the app.
+
+
+<a name="customer"></a>
+- Below is a demo of the `BamazonCustomer.js` file...
+  - Running `node BamazonCustomer.js` will use MySQL to pull up all the products for sale.
+    - The customer can then choose a product using its ID and then enter a quantity to buy.
+      ![Customer Order]()
+    - If the inventory has enough items, the order will be processed.
+      ![Order Valid]()
+    - If the inventory is lacking, the order will not be processed.
+      ![Order Invalid]()
