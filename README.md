@@ -45,8 +45,8 @@ Below are some screenshots that show the functionality of the app.
 - Below is a demo of the `BamazonCustomer.js` file...
   - Running `node BamazonCustomer.js` will use MySQL to pull up all the products for sale.
     - The customer can then choose a product using its ID and then enter a quantity to buy.
-      ![Customer Order]()
+      ![Customer Order](/example_photos/bamazon.png)
     - If the inventory has enough items, the order will be processed.
-      ![Order Valid]()
+      ![Order Valid](/example_photos/isEnough.png)
     - If the inventory is lacking, the order will not be processed.
-      ![Order Invalid]()
+      ![Order Invalid](/example_photos/notEnough.png)
